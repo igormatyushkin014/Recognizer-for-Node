@@ -53,7 +53,7 @@ export class Recognizer {
 
 	public remove(
 		socket: SocketIO.Socket
-	): void {
+	) {
 		let user = this.store.getUserBySocketId(
 			socket.id
 		);
@@ -79,7 +79,7 @@ export class Recognizer {
 		event: string,
 		data: any,
 		recipientId: string
-	): void {
+	) {
 		let recipient = this.store.getUserById(
 			recipientId
 		);
@@ -97,7 +97,7 @@ export class Recognizer {
 	public sendToEveryone(
 		event: string,
 		data: any
-	): void {
+	) {
 		this.configuration.socketIO.emit(
 			event,
 			data
