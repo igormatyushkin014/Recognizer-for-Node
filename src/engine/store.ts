@@ -38,7 +38,8 @@ export class Store {
 	): User {
 		let user: User = {
 			id: this.idProvider.getNextId(),
-			socket: socket
+			socket: socket,
+			data: undefined
 		};
 		this.users.push(
 			user
