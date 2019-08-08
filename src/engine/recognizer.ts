@@ -75,6 +75,10 @@ export class Recognizer {
 		return this.store.getAllUsers();
 	}
 
+	public users(): User[] {
+		return this.store.getAllUsers();
+	}
+
 	public send(
 		event: string,
 		data: any,
