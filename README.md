@@ -32,7 +32,36 @@ yarn add @types/socket.io --dev
 
 ## Usage
 
-Documentation will be added soon.
+`Recognizer` requires SocketIO server instance:
+
+```typescript
+const recognizer = new Recognizer({
+	socketIO: require("socket.io"),
+	users: {
+		onAdded: (user) => {
+			// Handle new user
+		},
+		onEvent: (user, event, data) => {
+			// Handle event from user
+		},
+		onRemoved: (user) => {
+			// Handle user's removal
+		}
+	}
+});
+```
+
+To add new user, simply send socket to recognizer:
+
+```typescript
+recognizer.add(socket);
+```
+
+To remove the user, write this:
+
+```typescript
+recognizer.remove(socket);
+```
 
 ## License
 
