@@ -36,7 +36,7 @@ yarn add @types/socket.io --dev
 
 ```typescript
 const recognizer = new Recognizer({
-	socketIO: require("socket.io"),
+	socketIO: <Your SocketIO instance>,
 	users: {
 		onAdded: (user) => {
 			// Handle new user
